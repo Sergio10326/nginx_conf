@@ -35,3 +35,8 @@ Para redirigir el error 404 a otra página, hace falta añadir información de f
 ```
 error_page 404 http://pagina_a_la_que_se_redirige;
 ```
+Esta configuración, debe añadirse de nuevo al apartado "server" y "http". Una vez lo tenemos, queda reiniciar el servicio y comprobar que se ha hecho correctamente con el comando:
+```
+curl -I http://localhost/localizacion_no_existente
+```
+De esta forma, de redirigirá a la página que queremos enviar este error.
